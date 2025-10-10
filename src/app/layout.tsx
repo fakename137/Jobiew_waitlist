@@ -47,10 +47,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Inline script to prevent flash of unstyled content (FOUC) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const savedTheme = localStorage.getItem('theme');
+                const root = document.documentElement;
+                const theme = savedTheme === 'dark' ? 'dark' : 'light';
+                root.classList.add(theme);
+                root.setAttribute('data-theme', theme);
+              })();
+            `,
+          }}
+        />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>

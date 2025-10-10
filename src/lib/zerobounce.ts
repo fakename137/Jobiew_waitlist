@@ -54,6 +54,16 @@ export async function validateEmailWithZeroBounce(email: string): Promise<ZeroBo
     const data: ZeroBounceResponse = await response.json();
     console.log('ZeroBounce response:', data);
 
+    // Check if API returned an error (invalid API key, out of credits, etc.)
+    if ('error' in data) {
+      console.log('ZeroBounce API error:', (data as Record<string, unknown>).error);
+      // Skip validation on API errors (invalid key, out of credits, etc.)
+      return { 
+        valid: true, 
+        reason: 'Email validation service unavailable, allowing email'
+      };
+    }
+
     // Map ZeroBounce status to our validation result
     switch (data.status) {
       case 'valid':

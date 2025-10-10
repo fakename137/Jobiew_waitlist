@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { addToWaitlist } from '@/lib/database'
 import { generateToken } from '@/lib/jwt'
 import { validateEmail } from '@/lib/email-validation'
+import { checkRateLimit, recordAttempt, getClientIP } from '@/lib/rate-limit'
 import { Resend } from 'resend'
 import { WaitlistEmailTemplate } from '@/components/email-template'
 
@@ -10,6 +11,27 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: NextRequest) {
   try {
     console.log('Join waitlist API called')
+    
+    // Get client IP address
+    const clientIP = getClientIP(request);
+    console.log('Request from IP:', clientIP);
+    
+    // Check rate limit BEFORE processing anything else
+    const rateLimitCheck = checkRateLimit(clientIP);
+    
+    if (rateLimitCheck.isBlocked) {
+      console.log('Rate limit exceeded for IP:', clientIP);
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: rateLimitCheck.message || 'Too many signup attempts. Please try again later.',
+          resetTime: rateLimitCheck.resetTime,
+        },
+        { status: 429 } // 429 Too Many Requests
+      )
+    }
+    
+    console.log('Rate limit check passed. Remaining attempts:', rateLimitCheck.remainingAttempts);
     
     const body = await request.json()
     console.log('Request body:', body)
@@ -30,11 +52,18 @@ export async function POST(request: NextRequest) {
     
     if (!validationResult.valid) {
       console.log('Email validation failed:', validationResult.reason)
+      // Record failed attempt for rate limiting
+      recordAttempt(clientIP);
+      console.log('Rate limit attempt recorded (failed validation) for IP:', clientIP);
       return NextResponse.json(
         { success: false, message: validationResult.reason || 'Invalid email address' },
         { status: 400 }
       )
     }
+
+    // Record signup attempt for rate limiting (after email validation passes)
+    recordAttempt(clientIP);
+    console.log('Rate limit attempt recorded for IP:', clientIP);
 
     console.log('Calling addToWaitlist with:', { email, inviteCode })
     const result = await addToWaitlist(email, inviteCode)

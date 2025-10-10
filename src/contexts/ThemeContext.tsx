@@ -29,13 +29,24 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       localStorage.setItem('theme', theme);
       // Update the document class for global styling
       const root = document.documentElement;
+      
+      // Remove both classes first to ensure clean state
+      root.classList.remove('light', 'dark');
+      
       if (theme === 'dark') {
         root.classList.add('dark');
         root.setAttribute('data-theme', 'dark');
       } else {
-        root.classList.remove('dark');
+        root.classList.add('light');
         root.setAttribute('data-theme', 'light');
       }
+      
+      // Force repaint for Safari/iOS to prevent caching issues
+      const originalDisplay = root.style.display;
+      root.style.display = 'none';
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      root.offsetHeight; // Trigger reflow
+      root.style.display = originalDisplay;
     }
   }, [theme, mounted]);
 

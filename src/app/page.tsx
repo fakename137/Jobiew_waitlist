@@ -177,12 +177,12 @@ function HomeContent() {
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Waitlist Badge */}
-          <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-full shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <div className="px-4 py-2 bg-black dark:bg-black">
-              <span className="text-sm font-semibold text-white dark:text-white">Waitlist v1</span>
+          <div className="inline-flex items-center rounded-full shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="px-4 py-2 bg-black dark:bg-white">
+              <span className="text-sm font-semibold text-white dark:text-black">Waitlist v1</span>
             </div>
-            <div className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-400 dark:bg-yellow-600 dark:bg-none">
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-900">Coming Soon</span>
+            <div className="px-4 py-2 bg-white dark:bg-black">
+              <span className="text-sm font-semibold text-black dark:text-white">Coming Soon</span>
             </div>
           </div>
 
@@ -193,14 +193,14 @@ function HomeContent() {
 
           {/* Sub-headline */}
           <p className="text-lg md:text-xl text-black dark:text-gray-300 max-w-xl mx-auto">
-            Tired of searching for jobs? Let your AI agentic browser do it for you. Get to interviews 10x faster and focus on what really matters.
+            Tired of searching for jobs and applying for it? Let your AI agentic browser do it for you. Get to interviews 10x faster and focus on what really matters.
           </p>
 
           {/* Email Signup Form */}
           <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-gray-400 dark:text-gray-500" />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
+                <Mail className="h-5 w-5 text-gray-400 dark:text-gray-400" />
               </div>
               <input
                 type="email"
@@ -251,9 +251,9 @@ function HomeContent() {
       <footer className="px-6 py-8 text-center">
         <p className="text-black dark:text-gray-400 text-sm">
           © Jobiew - Find your dream job 10x faster. Built by{' '}
-          <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">FakeName</a>{' '}
+          <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">FakeName</a>{' '}
           &{' '}
-          <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">abdulhaq</a>.
+          <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">abdulhaq</a>.
         </p>
       </footer>
     </div>
