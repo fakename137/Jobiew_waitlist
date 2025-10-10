@@ -216,13 +216,13 @@ function SuccessPageContent() {
             <div className="absolute bottom-6 left-6 w-3 h-3 bg-white/10 dark:bg-gray-600/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
             
             <div className="relative z-10">
-              <div className="text-xs uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
+              <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
                 LAUNCHING SOON
               </div>
-              <p className="text-black dark:text-white text-2xl font-black mb-2 drop-shadow-lg tracking-tight">
+              <p className="text-black dark:text-white text-xl md:text-2xl font-black mb-2 drop-shadow-lg tracking-tight">
                 WE&apos;LL NOTIFY YOU
               </p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm font-medium drop-shadow-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm font-medium drop-shadow-sm">
                 Early access · Exclusive features · VIP status
               </p>
             </div>
@@ -246,13 +246,13 @@ function SuccessPageContent() {
           <div className="relative z-10">
             {/* Position Display */}
             <div className="mb-6">
-              <div className="text-sm uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
+              <div className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
                 YOUR POSITION
               </div>
-              <h1 className="text-6xl md:text-7xl font-black text-black dark:text-white drop-shadow-lg tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-black dark:text-white drop-shadow-lg tracking-tight">
                 #{user.position.toLocaleString()}
               </h1>
-              <div className="text-lg text-gray-600 dark:text-gray-400 font-medium mt-1">
+              <div className="text-base md:text-lg text-gray-600 dark:text-gray-400 font-medium mt-1">
                 of {totalUsers.toLocaleString()} in queue
               </div>
             </div>
@@ -263,38 +263,38 @@ function SuccessPageContent() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 via-white/20 to-white/10 dark:from-gray-700/20 dark:via-gray-600/30 dark:to-gray-700/20 rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
               
               {/* Main content */}
-              <div className="relative bg-white/70 dark:bg-white/8 backdrop-blur-lg px-5 py-3 rounded-xl border-2 border-gray-300/60 dark:border-white/20 shadow-xl">
-                <div className="flex items-center gap-3">
+              <div className="relative bg-white/70 dark:bg-white/8 backdrop-blur-lg px-3 md:px-5 py-2 md:py-3 rounded-xl border-2 border-gray-300/60 dark:border-white/20 shadow-xl">
+                <div className="flex items-center gap-2 md:gap-3">
                   {/* Left side: Number emphasis */}
                   <div className="flex flex-col items-center">
-                    <div className="text-[8px] uppercase tracking-[0.4em] text-gray-600 dark:text-gray-400 font-black">
+                    <div className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] text-gray-600 dark:text-gray-400 font-black">
                       JUMP
                     </div>
                     <div className="relative my-0.5">
-                      <div className="text-3xl font-black text-black dark:text-white leading-none tracking-tighter">
+                      <div className="text-2xl md:text-3xl font-black text-black dark:text-white leading-none tracking-tighter">
                         +3
                       </div>
-                      <div className="absolute -top-0.5 -right-2 text-[10px] font-black text-gray-600 dark:text-gray-400">
+                      <div className="absolute -top-0.5 -right-1.5 md:-right-2 text-[8px] md:text-[10px] font-black text-gray-600 dark:text-gray-400">
                         ×
                       </div>
                     </div>
-                    <div className="text-[8px] uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-black">
+                    <div className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-black">
                       SPOTS
                     </div>
                   </div>
                   
                   {/* Divider */}
-                  <div className="h-12 w-px bg-white/20 dark:bg-white/15"></div>
+                  <div className="h-10 md:h-12 w-px bg-white/20 dark:bg-white/15"></div>
                   
                   {/* Right side: Action text */}
                   <div className="flex flex-col">
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-black leading-tight">
+                    <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-black leading-tight">
                       PER
                     </div>
-                    <div className="text-lg font-black text-black dark:text-white leading-none tracking-tight my-0.5">
+                    <div className="text-base md:text-lg font-black text-black dark:text-white leading-none tracking-tight my-0.5">
                       REFERRAL
                     </div>
-                    <div className="text-[8px] uppercase tracking-wider text-gray-600 dark:text-gray-400 font-bold">
+                    <div className="text-[7px] md:text-[8px] uppercase tracking-wider text-gray-600 dark:text-gray-400 font-bold">
                       → SHARE NOW
                     </div>
                   </div>
@@ -306,7 +306,7 @@ function SuccessPageContent() {
             <div className="space-y-4">
               <button
                 onClick={copyInviteLink}
-                className="w-full bg-white/70 dark:bg-white/8 backdrop-blur-md text-black dark:text-white px-10 py-4 rounded-2xl text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-white/15 hover:bg-white/80 dark:hover:bg-white/12 hover:border-gray-400/70 dark:hover:border-white/20"
+                className="w-full bg-white/70 dark:bg-white/8 backdrop-blur-md text-black dark:text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-white/15 hover:bg-white/80 dark:hover:bg-white/12 hover:border-gray-400/70 dark:hover:border-white/20"
               >
                 {copied ? 'LINK COPIED' : 'GET REFERRAL LINK'}
               </button>
@@ -316,12 +316,13 @@ function SuccessPageContent() {
                 href="https://whatsapp.com/channel/0029VbBnwrn5a247geAOdo0R"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-green-600 dark:from-green-600 dark:to-green-700 text-white px-10 py-4 rounded-2xl text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-green-600 dark:border-green-700 hover:from-green-600 hover:to-green-700 dark:hover:from-green-700 dark:hover:to-green-800"
+                className="w-full inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-green-500 to-green-600 dark:from-green-600 dark:to-green-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-green-600 dark:border-green-700 hover:from-green-600 hover:to-green-700 dark:hover:from-green-700 dark:hover:to-green-800"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                JOIN WHATSAPP COMMUNITY
+                <span className="hidden sm:inline">JOIN WHATSAPP COMMUNITY</span>
+                <span className="sm:hidden">JOIN COMMUNITY</span>
               </a>
             </div>
           </div>
@@ -340,12 +341,12 @@ function SuccessPageContent() {
             
             <div className="relative z-10">
               {/* Header */}
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10 dark:border-gray-700/20">
-                <Trophy className="w-5 h-5 text-black dark:text-white drop-shadow-md" />
-                <h3 className="text-lg font-black uppercase tracking-wider text-black dark:text-white drop-shadow-sm">
+              <div className="flex items-center gap-2 md:gap-3 mb-6 pb-4 border-b border-white/10 dark:border-gray-700/20">
+                <Trophy className="w-4 h-4 md:w-5 md:h-5 text-black dark:text-white drop-shadow-md" />
+                <h3 className="text-base md:text-lg font-black uppercase tracking-wider text-black dark:text-white drop-shadow-sm">
                   HALL OF FAME
                 </h3>
-                <span className="ml-auto text-xs text-gray-600 dark:text-gray-400 font-bold uppercase tracking-wide">
+                <span className="ml-auto text-[10px] md:text-xs text-gray-600 dark:text-gray-400 font-bold uppercase tracking-wide">
                   TOP 3
                 </span>
               </div>
@@ -378,14 +379,14 @@ function SuccessPageContent() {
                       )}
                       
                       <div
-                        className={`group flex items-center gap-4 p-4 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
+                        className={`group flex items-center gap-2 md:gap-4 p-3 md:p-4 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
                           leaderUser.id === user?.id
                             ? 'bg-white/80 dark:bg-white/10 border-2 border-gray-300/70 dark:border-white/20 shadow-lg' 
                             : 'bg-white/50 dark:bg-gray-800/10 border border-gray-200/50 dark:border-gray-700/20 hover:bg-white/70 dark:hover:bg-gray-800/15'
                         }`}
                       >
                     {/* Rank Badge */}
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm shadow-md transition-all duration-300 ${
+                    <div className={`flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-xs md:text-sm shadow-md transition-all duration-300 ${
                       index === 0
                         ? 'bg-white/80 dark:bg-white/20 text-black dark:text-white border-2 border-gray-300/70 dark:border-white/30' 
                         : index === 1
@@ -399,17 +400,17 @@ function SuccessPageContent() {
                     
                     {/* User Info */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-base font-semibold text-black dark:text-white truncate">
+                      <div className="flex items-baseline gap-1 md:gap-2">
+                        <span className="text-sm md:text-base font-semibold text-black dark:text-white truncate">
                           {leaderUser.email.replace(/(.{2}).*(@.*)/, '$1***$2')}
                         </span>
                         {leaderUser.id === user?.id && (
-                          <span className="text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-2 py-1 bg-white/70 dark:bg-white/10 rounded-md border border-gray-300/60 dark:border-white/15">
+                          <span className="text-[8px] md:text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-white/70 dark:bg-white/10 rounded-md border border-gray-300/60 dark:border-white/15">
                             YOU
                           </span>
                         )}
                       </div>
-                      <div className="text-[10px] text-gray-600 dark:text-gray-400 mt-1 font-medium uppercase tracking-wide">
+                      <div className="text-[9px] md:text-[10px] text-gray-600 dark:text-gray-400 mt-1 font-medium uppercase tracking-wide">
                         {leaderUser.referral_count === 0 
                           ? 'No refs' 
                           : `${leaderUser.referral_count} ref${leaderUser.referral_count === 1 ? '' : 's'}`
@@ -418,9 +419,9 @@ function SuccessPageContent() {
                     </div>
                     
                     {/* Referral Count Badge */}
-                    <div className="flex-shrink-0 px-3 py-2 rounded-xl bg-white/60 dark:bg-gray-800/20 border border-gray-200/50 dark:border-gray-700/25 text-center">
-                      <div className="text-[10px] text-gray-600 dark:text-gray-400 font-black uppercase tracking-wider">REFS</div>
-                      <div className="text-xl font-black text-black dark:text-white leading-none mt-1">
+                    <div className="flex-shrink-0 px-2 md:px-3 py-1.5 md:py-2 rounded-xl bg-white/60 dark:bg-gray-800/20 border border-gray-200/50 dark:border-gray-700/25 text-center">
+                      <div className="text-[8px] md:text-[10px] text-gray-600 dark:text-gray-400 font-black uppercase tracking-wider">REFS</div>
+                      <div className="text-lg md:text-xl font-black text-black dark:text-white leading-none mt-1">
                         {leaderUser.referral_count}
                       </div>
                     </div>
@@ -433,8 +434,8 @@ function SuccessPageContent() {
               {/* Empty State */}
               {leaderboard.length === 0 && (
                 <div className="text-center py-12">
-                  <Trophy className="w-12 h-12 text-gray-400 dark:text-gray-600 mx-auto mb-3 opacity-50" />
-                  <p className="text-gray-600 dark:text-gray-400 text-sm font-bold uppercase tracking-wider">
+                  <Trophy className="w-10 h-10 md:w-12 md:h-12 text-gray-400 dark:text-gray-600 mx-auto mb-3 opacity-50" />
+                  <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">
                     BE THE FIRST
                   </p>
                 </div>
