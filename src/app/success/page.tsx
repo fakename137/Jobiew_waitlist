@@ -175,10 +175,10 @@ function SuccessPageContent() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="w-full px-6 py-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-lg font-semibold text-black dark:text-gray-200">Jobiew</span>
-          </div>
+          <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Jobiew</span>
+            </div>
           
           <div className="flex items-center gap-2">
             <button 
@@ -203,13 +203,13 @@ function SuccessPageContent() {
 
          {/* Footer */}
          <div className="mt-8 mb-8 text-center">
-           <div className="bg-white/5 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border border-white/10 dark:border-gray-700/20 relative overflow-hidden">
+           <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border border-gray-200/50 dark:border-gray-700/20 relative overflow-hidden">
             {/* Creative Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
             
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/10 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/5 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
+            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-pink-200/15 to-blue-200/15 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
             
             {/* Geometric Shapes */}
             <div className="absolute top-6 right-6 w-4 h-4 border border-white/20 dark:border-gray-600/30 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
@@ -229,14 +229,14 @@ function SuccessPageContent() {
           </div>
         </div>
         {/* Main Glassmorphism Card */}
-        <div className="bg-white/5 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-white/10 dark:border-gray-700/20">
+        <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-700/20">
           {/* Creative Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
           
           {/* Floating Orbs */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-white/5 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
-          <div className="absolute top-1/2 -left-8 w-16 h-16 bg-white/8 dark:bg-gray-500/20 rounded-full blur-lg animate-float delay-500"></div>
+          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-200/25 to-purple-200/25 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-pink-200/20 to-blue-200/20 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
+          <div className="absolute top-1/2 -left-8 w-16 h-16 bg-gradient-to-br from-yellow-200/15 to-orange-200/15 dark:bg-gray-500/20 rounded-full blur-lg animate-float delay-500"></div>
           
           {/* Geometric Shapes */}
           <div className="absolute top-8 right-8 w-6 h-6 border border-white/20 dark:border-gray-600/30 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
@@ -263,7 +263,7 @@ function SuccessPageContent() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 via-white/20 to-white/10 dark:from-gray-700/20 dark:via-gray-600/30 dark:to-gray-700/20 rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
               
               {/* Main content */}
-              <div className="relative bg-white/15 dark:bg-white/8 backdrop-blur-lg px-5 py-3 rounded-xl border-2 border-white/30 dark:border-white/20 shadow-xl">
+              <div className="relative bg-white/70 dark:bg-white/8 backdrop-blur-lg px-5 py-3 rounded-xl border-2 border-gray-300/60 dark:border-white/20 shadow-xl">
                 <div className="flex items-center gap-3">
                   {/* Left side: Number emphasis */}
                   <div className="flex flex-col items-center">
@@ -306,7 +306,7 @@ function SuccessPageContent() {
             <div>
               <button
                 onClick={copyInviteLink}
-                className="bg-white/15 dark:bg-white/8 backdrop-blur-md text-black dark:text-white px-10 py-4 rounded-2xl text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-white/20 dark:border-white/15 hover:bg-white/25 dark:hover:bg-white/12 hover:border-white/30 dark:hover:border-white/20"
+                className="bg-white/70 dark:bg-white/8 backdrop-blur-md text-black dark:text-white px-10 py-4 rounded-2xl text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-white/15 hover:bg-white/80 dark:hover:bg-white/12 hover:border-gray-400/70 dark:hover:border-white/20"
               >
                 {copied ? 'LINK COPIED' : 'GET REFERRAL LINK'}
               </button>
@@ -317,13 +317,13 @@ function SuccessPageContent() {
         {/* Leaderboard Section */}
         <div className="mt-8">
           {/* Leaderboard Glassmorphism Card */}
-          <div className="bg-white/5 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/10 dark:border-gray-700/20 relative overflow-hidden">
+          <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-700/20 relative overflow-hidden">
             {/* Creative Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
             
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white/5 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-pink-200/15 to-blue-200/15 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
             
             <div className="relative z-10">
               {/* Header */}
@@ -367,19 +367,19 @@ function SuccessPageContent() {
                       <div
                         className={`group flex items-center gap-4 p-4 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
                           leaderUser.id === user?.id
-                            ? 'bg-white/20 dark:bg-white/10 border-2 border-white/30 dark:border-white/20 shadow-lg' 
-                            : 'bg-white/5 dark:bg-gray-800/10 border border-white/10 dark:border-gray-700/20 hover:bg-white/10 dark:hover:bg-gray-800/15'
+                            ? 'bg-white/80 dark:bg-white/10 border-2 border-gray-300/70 dark:border-white/20 shadow-lg' 
+                            : 'bg-white/50 dark:bg-gray-800/10 border border-gray-200/50 dark:border-gray-700/20 hover:bg-white/70 dark:hover:bg-gray-800/15'
                         }`}
                       >
                     {/* Rank Badge */}
                     <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm shadow-md transition-all duration-300 ${
                       index === 0
-                        ? 'bg-white/30 dark:bg-white/20 text-black dark:text-white border-2 border-white/40 dark:border-white/30' 
+                        ? 'bg-white/80 dark:bg-white/20 text-black dark:text-white border-2 border-gray-300/70 dark:border-white/30' 
                         : index === 1
-                        ? 'bg-white/25 dark:bg-white/15 text-black dark:text-white border border-white/30 dark:border-white/25'
+                        ? 'bg-white/70 dark:bg-white/15 text-black dark:text-white border border-gray-300/60 dark:border-white/25'
                         : index === 2
-                        ? 'bg-white/20 dark:bg-white/10 text-black dark:text-white border border-white/25 dark:border-white/20'
-                        : 'bg-white/10 dark:bg-gray-700/30 text-black dark:text-white border border-white/15 dark:border-gray-700/30'
+                        ? 'bg-white/60 dark:bg-white/10 text-black dark:text-white border border-gray-200/50 dark:border-white/20'
+                        : 'bg-white/50 dark:bg-gray-700/30 text-black dark:text-white border border-gray-200/50 dark:border-gray-700/30'
                     }`}>
                       {leaderUser.position}
                     </div>
@@ -391,7 +391,7 @@ function SuccessPageContent() {
                           {leaderUser.email.replace(/(.{2}).*(@.*)/, '$1***$2')}
                         </span>
                         {leaderUser.id === user?.id && (
-                          <span className="text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-2 py-1 bg-white/20 dark:bg-white/10 rounded-md border border-white/20 dark:border-white/15">
+                          <span className="text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-2 py-1 bg-white/70 dark:bg-white/10 rounded-md border border-gray-300/60 dark:border-white/15">
                             YOU
                           </span>
                         )}
@@ -405,7 +405,7 @@ function SuccessPageContent() {
                     </div>
                     
                     {/* Referral Count Badge */}
-                    <div className="flex-shrink-0 px-3 py-2 rounded-xl bg-white/10 dark:bg-gray-800/20 border border-white/15 dark:border-gray-700/25 text-center">
+                    <div className="flex-shrink-0 px-3 py-2 rounded-xl bg-white/60 dark:bg-gray-800/20 border border-gray-200/50 dark:border-gray-700/25 text-center">
                       <div className="text-[10px] text-gray-600 dark:text-gray-400 font-black uppercase tracking-wider">REFS</div>
                       <div className="text-xl font-black text-black dark:text-white leading-none mt-1">
                         {leaderUser.referral_count}
@@ -430,6 +430,7 @@ function SuccessPageContent() {
           </div>
         </div>
 
+
        
         </div>
       </main>
@@ -437,7 +438,7 @@ function SuccessPageContent() {
       {/* Footer */}
       <footer className="px-6 py-8 text-center">
         <p className="text-black dark:text-gray-400 text-sm">
-          © Jobiew - The software that sparks your imagination. Built by{' '}
+          © Jobiew - Find your dream job 10x faster. Built by{' '}
           <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">FakeName</a>{' '}
           &{' '}
           <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">abdulhaq</a>.

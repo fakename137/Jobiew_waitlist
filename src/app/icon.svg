@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="url(#bgGradient)"/>
+  
+  <!-- Letter J -->
+  <path d="M 58 22 L 58 62 Q 58 78 42 78 Q 26 78 26 64 L 35 64 Q 35 69 42 69 Q 49 69 49 62 L 49 22 Z" fill="#FFFFFF"/>
+  
+  <!-- Accent line/dot representing AI/tech -->
+  <circle cx="66" cy="26" r="5" fill="#FFD700"/>
+  <rect x="64" y="38" width="4" height="8" rx="2" fill="#FFD700" opacity="0.6"/>
+  <rect x="64" y="50" width="4" height="5" rx="2" fill="#FFD700" opacity="0.3"/>
+</svg>
+

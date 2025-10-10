@@ -1,4 +1,5 @@
 import { promises as dns } from 'dns';
+import { validateEmailWithZeroBounce } from './zerobounce';
 
 // List of common disposable/temporary email domains
 const DISPOSABLE_EMAIL_DOMAINS = [
@@ -105,6 +106,12 @@ export function isDisposableEmail(email: string): boolean {
  * Check if domain has valid MX records (can receive emails)
  */
 export async function hasValidMXRecords(email: string): Promise<boolean> {
+  // Skip MX check in development mode
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Skipping MX record check in development mode');
+    return true;
+  }
+
   // Check if we're in a Node.js environment (not edge runtime)
   if (typeof process === 'undefined' || !dns) {
     console.warn('DNS module not available, skipping MX record check');
@@ -120,9 +127,11 @@ export async function hasValidMXRecords(email: string): Promise<boolean> {
     const mxRecords = await dns.resolveMx(domain);
     return mxRecords && mxRecords.length > 0;
   } catch (error) {
-    // DNS lookup failed - domain might not exist or have no MX records
+    // DNS lookup failed - could be network issue, allow the email in production too
+    // since we don't want to block legitimate users due to temporary DNS issues
     console.error('MX record lookup failed:', error);
-    return false;
+    console.warn('Allowing email despite DNS lookup failure');
+    return true; // Allow the email if DNS lookup fails
   }
 }
 
@@ -182,6 +191,25 @@ export async function validateEmail(
         reason: 'This email domain cannot receive emails. Please check your email address.',
       };
     }
+  }
+
+  // ZeroBounce validation (comprehensive email verification)
+  // If ZeroBounce fails or API is unavailable, we skip it and allow the email
+  console.log('Running ZeroBounce validation for:', normalizedEmail);
+  try {
+    const zeroBounceResult = await validateEmailWithZeroBounce(normalizedEmail);
+    
+    if (!zeroBounceResult.valid) {
+      console.log('ZeroBounce validation failed:', zeroBounceResult.reason);
+      return {
+        valid: false,
+        reason: zeroBounceResult.reason || 'Email validation failed',
+      };
+    }
+    console.log('ZeroBounce validation passed');
+  } catch (error) {
+    console.log('ZeroBounce validation error, skipping:', error);
+    // Skip ZeroBounce validation if it fails - allow the email through
   }
   
   return { valid: true };

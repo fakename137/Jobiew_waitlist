@@ -1,0 +1,21 @@
+{
+  "name": "Jobiew - AI-Powered Job Search",
+  "short_name": "Jobiew",
+  "description": "Find your dream job 10x faster with AI-powered job hunting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "lifestyle"],
+  "screenshots": []
+}
+

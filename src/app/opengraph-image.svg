@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Logo J -->
+  <g transform="translate(100, 180)">
+    <rect width="160" height="160" rx="32" fill="#000000" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+    <path d="M 105 50 L 105 110 Q 105 130 85 130 Q 65 130 65 112 L 73 112 Q 73 120 85 120 Q 97 120 97 110 L 97 50 Z" fill="#FFFFFF"/>
+    <circle cx="115" cy="55" r="6" fill="#FFD700"/>
+  </g>
+  
+  <!-- Main text -->
+  <text x="300" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#FFFFFF">
+    Jobiew
+  </text>
+  
+  <!-- Tagline -->
+  <text x="300" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" fill="#999999">
+    Find Your Dream Job 10x Faster
+  </text>
+  
+  <!-- Description -->
+  <text x="300" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#666666">
+    AI-powered job hunting platform
+  </text>
+  
+  <!-- CTA Badge -->
+  <g transform="translate(300, 450)">
+    <rect width="220" height="60" rx="30" fill="#FFD700"/>
+    <text x="110" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">
+      Join Waitlist
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="1000" cy="150" r="80" fill="rgba(255,215,0,0.05)"/>
+  <circle cx="1050" cy="450" r="120" fill="rgba(255,255,255,0.02)"/>
+</svg>
+

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -13,9 +13,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
-  title: "Waitlist - The software that sparks your imagination",
-  description: "Join our waitlist and be the first to experience the software that sparks your imagination.",
+  title: "Jobiew - Find Your Dream Job 10x Faster | AI-Powered Job Search",
+  description: "Join the Jobiew waitlist for early access to AI-powered job hunting. Let your AI agent find jobs for you and get to interviews 10x faster. Revolutionary job search technology.",
+  keywords: ["job search", "AI jobs", "career", "job hunting", "recruitment", "AI agent", "employment"],
+  authors: [{ name: "Jobiew Team" }],
+  openGraph: {
+    title: "Jobiew - AI-Powered Job Search Platform",
+    description: "Find your dream job 10x faster with AI-powered job hunting. Join the waitlist for early access.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jobiew - Find Your Dream Job 10x Faster",
+    description: "AI-powered job hunting platform. Join the waitlist for early access.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -25,8 +48,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
       >
         <ThemeProvider>
           {children}

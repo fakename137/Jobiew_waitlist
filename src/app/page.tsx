@@ -158,8 +158,7 @@ function HomeContent() {
       <header className="w-full px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-         
-            <span className="text-lg font-semibold text-black dark:text-gray-200">Jobiew</span>
+            <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Jobiew</span>
           </div>
           
       
@@ -178,12 +177,12 @@ function HomeContent() {
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Waitlist Badge */}
-          <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-full shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             <div className="px-4 py-2 bg-black dark:bg-black">
-              <span className="text-sm font-medium text-white dark:text-white">Waitlist v1</span>
+              <span className="text-sm font-semibold text-white dark:text-white">Waitlist v1</span>
             </div>
-            <div className="px-4 py-2 bg-yellow-400 dark:bg-yellow-600">
-              <span className="text-sm font-medium text-gray-900 dark:text-gray-900">Coming Soon</span>
+            <div className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-400 dark:bg-yellow-600 dark:bg-none">
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-900">Coming Soon</span>
             </div>
           </div>
 
@@ -201,7 +200,7 @@ function HomeContent() {
           <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-black dark:text-gray-500" />
+                <Mail className="h-5 w-5 text-gray-400 dark:text-gray-500" />
               </div>
               <input
                 type="email"
@@ -211,8 +210,8 @@ function HomeContent() {
                 className={`w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border ${
                   emailError 
                     ? 'border-red-500 dark:border-red-500' 
-                    : 'border-black dark:border-gray-600'
-                } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-lg backdrop-blur-0`}
+                    : 'border-gray-300 dark:border-gray-600'
+                } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:focus:ring-blue-500 dark:focus:border-transparent outline-none text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-400 shadow-lg backdrop-blur-0 transition-all duration-300`}
                 required
                 disabled={isLoading}
               />
@@ -226,7 +225,7 @@ function HomeContent() {
             <button
               type="submit"
               disabled={isLoading || !!emailError}
-              className="w-full bg-black dark:bg-gray-700 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors shadow-lg border border-black dark:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-black dark:bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 shadow-2xl border border-black dark:border dark:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
             >
               {isLoading ? 'Joining...' : 'Join The Waitlist'}
             </button>
@@ -251,7 +250,7 @@ function HomeContent() {
       {/* Footer */}
       <footer className="px-6 py-8 text-center">
         <p className="text-black dark:text-gray-400 text-sm">
-          © Waitlist - A more meaningful home for software. Built by{' '}
+          © Jobiew - Find your dream job 10x faster. Built by{' '}
           <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">FakeName</a>{' '}
           &{' '}
           <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">abdulhaq</a>.
