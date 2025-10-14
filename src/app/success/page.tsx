@@ -203,18 +203,7 @@ function SuccessPageContent() {
 
          {/* Footer */}
          <div className="mt-8 mb-8 text-center">
-           <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl border border-gray-200/50 dark:border-gray-700/20 relative overflow-hidden">
-            {/* Creative Background Elements */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-pink-200/15 to-blue-200/15 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
-            
-            {/* Geometric Shapes */}
-            <div className="absolute top-6 right-6 w-4 h-4 border border-white/20 dark:border-gray-600/30 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
-            <div className="absolute bottom-6 left-6 w-3 h-3 bg-white/10 dark:bg-gray-600/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
-            
+           <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-6 shadow-2xl border border-gray-200/50 dark:border-gray-600/30 relative overflow-hidden">
             <div className="relative z-10">
               <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
                 LAUNCHING SOON
@@ -228,19 +217,8 @@ function SuccessPageContent() {
             </div>
           </div>
         </div>
-        {/* Main Glassmorphism Card */}
-        <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-700/20">
-          {/* Creative Background Elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
-          
-          {/* Floating Orbs */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-200/25 to-purple-200/25 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-pink-200/20 to-blue-200/20 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
-          <div className="absolute top-1/2 -left-8 w-16 h-16 bg-gradient-to-br from-yellow-200/15 to-orange-200/15 dark:bg-gray-500/20 rounded-full blur-lg animate-float delay-500"></div>
-          
-          {/* Geometric Shapes */}
-          <div className="absolute top-8 right-8 w-6 h-6 border border-white/20 dark:border-gray-600/30 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
-          <div className="absolute bottom-12 left-12 w-4 h-4 bg-white/10 dark:bg-gray-600/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+        {/* Main Card */}
+        <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-600/30">
           
           {/* Main Content */}
           <div className="relative z-10">
@@ -259,11 +237,8 @@ function SuccessPageContent() {
             
             {/* Referral CTA */}
             <div className="mb-6 relative inline-block group">
-              {/* Glowing backdrop */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 via-white/20 to-white/10 dark:from-gray-700/20 dark:via-gray-600/30 dark:to-gray-700/20 rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
-              
               {/* Main content */}
-              <div className="relative bg-white/70 dark:bg-white/8 backdrop-blur-lg px-3 md:px-5 py-2 md:py-3 rounded-xl border-2 border-gray-300/60 dark:border-white/20 shadow-xl">
+              <div className="relative bg-white/70 dark:bg-gray-700/50 px-3 md:px-5 py-2 md:py-3 rounded-xl border-2 border-gray-300/60 dark:border-gray-500/40 shadow-xl">
                 <div className="flex items-center gap-2 md:gap-3">
                   {/* Left side: Number emphasis */}
                   <div className="flex flex-col items-center">
@@ -306,7 +281,7 @@ function SuccessPageContent() {
             <div className="space-y-4">
               <button
                 onClick={copyInviteLink}
-                className="w-full bg-white/70 dark:bg-white/8 backdrop-blur-md text-black dark:text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-white/15 hover:bg-white/80 dark:hover:bg-white/12 hover:border-gray-400/70 dark:hover:border-white/20"
+                className="w-full bg-white/70 dark:bg-gray-700/50 text-black dark:text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-gray-500/40 hover:bg-white/80 dark:hover:bg-gray-600/60 hover:border-gray-400/70 dark:hover:border-gray-400/50"
               >
                 {copied ? 'LINK COPIED' : 'GET REFERRAL LINK'}
               </button>
@@ -330,14 +305,8 @@ function SuccessPageContent() {
 
         {/* Leaderboard Section */}
         <div className="mt-8">
-          {/* Leaderboard Glassmorphism Card */}
-          <div className="bg-white/60 dark:bg-gray-900/10 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-700/20 relative overflow-hidden">
-            {/* Creative Background Elements */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 dark:from-gray-800/10 dark:via-transparent dark:to-gray-700/5"></div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 dark:bg-gray-600/20 rounded-full blur-xl animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-pink-200/15 to-blue-200/15 dark:bg-gray-700/15 rounded-full blur-2xl animate-float delay-1000"></div>
+          {/* Leaderboard Card */}
+          <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-600/30 relative overflow-hidden">
             
             <div className="relative z-10">
               {/* Header */}
@@ -379,22 +348,10 @@ function SuccessPageContent() {
                       )}
                       
                       <div
-                        className={`group flex items-center gap-2 md:gap-4 p-3 md:p-4 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
-                          leaderUser.id === user?.id
-                            ? 'bg-white/80 dark:bg-white/10 border-2 border-gray-300/70 dark:border-white/20 shadow-lg' 
-                            : 'bg-white/50 dark:bg-gray-800/10 border border-gray-200/50 dark:border-gray-700/20 hover:bg-white/70 dark:hover:bg-gray-800/15'
-                        }`}
+                        className="group flex items-center gap-2 md:gap-4 p-3 md:p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg bg-white/60 dark:bg-gray-700/40 border border-gray-200/50 dark:border-gray-500/30 hover:bg-white/70 dark:hover:bg-gray-600/50"
                       >
                     {/* Rank Badge */}
-                    <div className={`flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-xs md:text-sm shadow-md transition-all duration-300 ${
-                      index === 0
-                        ? 'bg-white/80 dark:bg-white/20 text-black dark:text-white border-2 border-gray-300/70 dark:border-white/30' 
-                        : index === 1
-                        ? 'bg-white/70 dark:bg-white/15 text-black dark:text-white border border-gray-300/60 dark:border-white/25'
-                        : index === 2
-                        ? 'bg-white/60 dark:bg-white/10 text-black dark:text-white border border-gray-200/50 dark:border-white/20'
-                        : 'bg-white/50 dark:bg-gray-700/30 text-black dark:text-white border border-gray-200/50 dark:border-gray-700/30'
-                    }`}>
+                    <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-xs md:text-sm shadow-md transition-all duration-300 bg-white/60 dark:bg-gray-600/40 text-black dark:text-white border border-gray-200/50 dark:border-gray-500/30">
                       {leaderUser.position}
                     </div>
                     
@@ -405,7 +362,7 @@ function SuccessPageContent() {
                           {leaderUser.email.replace(/(.{2}).*(@.*)/, '$1***$2')}
                         </span>
                         {leaderUser.id === user?.id && (
-                          <span className="text-[8px] md:text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-white/70 dark:bg-white/10 rounded-md border border-gray-300/60 dark:border-white/15">
+                          <span className="text-[8px] md:text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-white/60 dark:bg-gray-600/40 rounded-md border border-gray-200/50 dark:border-gray-500/30">
                             YOU
                           </span>
                         )}
@@ -419,7 +376,7 @@ function SuccessPageContent() {
                     </div>
                     
                     {/* Referral Count Badge */}
-                    <div className="flex-shrink-0 px-2 md:px-3 py-1.5 md:py-2 rounded-xl bg-white/60 dark:bg-gray-800/20 border border-gray-200/50 dark:border-gray-700/25 text-center">
+                    <div className="flex-shrink-0 px-2 md:px-3 py-1.5 md:py-2 rounded-xl bg-white/60 dark:bg-gray-600/40 border border-gray-200/50 dark:border-gray-500/30 text-center">
                       <div className="text-[8px] md:text-[10px] text-gray-600 dark:text-gray-400 font-black uppercase tracking-wider">REFS</div>
                       <div className="text-lg md:text-xl font-black text-black dark:text-white leading-none mt-1">
                         {leaderUser.referral_count}

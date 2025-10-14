@@ -1,55 +1,69 @@
-/**
- * Analytics utility for tracking page views and events
- * 
- * This is a simple client-side analytics implementation.
- * You can integrate with services like Google Analytics, Mixpanel, or Posthog later.
- */
+// Simple analytics tracking for page views and events
+// This is a basic implementation - in production you might want to use Google Analytics, Mixpanel, etc.
 
-export function trackPageView(pageName: string): void {
-  if (typeof window === 'undefined') {
-    return; // Don't track on server-side
-  }
-
-  try {
-    console.log(`[Analytics] Page view: ${pageName}`);
-    
-    // Add your analytics service integration here
-    // Example: window.gtag?.('event', 'page_view', { page_title: pageName });
-    // Example: window.mixpanel?.track('Page View', { page: pageName });
-  } catch (error) {
-    console.error('Error tracking page view:', error);
-  }
+interface AnalyticsEvent {
+  event: string
+  properties?: Record<string, unknown>
+  timestamp?: number
 }
 
-export function trackEvent(eventName: string, properties?: Record<string, unknown>): void {
-  if (typeof window === 'undefined') {
-    return; // Don't track on server-side
-  }
+// Store events in memory (in production, you'd send these to your analytics service)
+const events: AnalyticsEvent[] = []
 
-  try {
-    console.log(`[Analytics] Event: ${eventName}`, properties);
-    
-    // Add your analytics service integration here
-    // Example: window.gtag?.('event', eventName, properties);
-    // Example: window.mixpanel?.track(eventName, properties);
-  } catch (error) {
-    console.error('Error tracking event:', error);
+export function trackPageView(page: string) {
+  const event: AnalyticsEvent = {
+    event: 'page_view',
+    properties: {
+      page,
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      timestamp: Date.now()
+    },
+    timestamp: Date.now()
   }
+  
+  events.push(event)
+  
+  // In development, log to console
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Analytics - Page View:', event)
+  }
+  
+  // In production, you would send this to your analytics service
+  // Example: sendToAnalytics(event)
 }
 
-export function identifyUser(userId: string, traits?: Record<string, unknown>): void {
-  if (typeof window === 'undefined') {
-    return; // Don't track on server-side
+export function trackEvent(eventName: string, properties?: Record<string, unknown>) {
+  const event: AnalyticsEvent = {
+    event: eventName,
+    properties: {
+      ...properties,
+      timestamp: Date.now()
+    },
+    timestamp: Date.now()
   }
-
-  try {
-    console.log(`[Analytics] Identify user: ${userId}`, traits);
-    
-    // Add your analytics service integration here
-    // Example: window.gtag?.('set', 'user_id', userId);
-    // Example: window.mixpanel?.identify(userId);
-  } catch (error) {
-    console.error('Error identifying user:', error);
+  
+  events.push(event)
+  
+  // In development, log to console
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Analytics - Event:', event)
   }
+  
+  // In production, you would send this to your analytics service
+  // Example: sendToAnalytics(event)
 }
 
+export function getEvents(): AnalyticsEvent[] {
+  return [...events]
+}
+
+export function clearEvents(): void {
+  events.length = 0
+}
+
+// Example function for sending to analytics service (implement as needed)
+// function sendToAnalytics(event: AnalyticsEvent) {
+//   // Send to Google Analytics, Mixpanel, PostHog, etc.
+//   // Example with Google Analytics:
+//   // gtag('event', event.event, event.properties)
+// }
