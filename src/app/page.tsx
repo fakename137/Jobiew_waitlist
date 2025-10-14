@@ -177,11 +177,11 @@ function HomeContent() {
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Waitlist Badge */}
-          <div className="inline-flex items-center rounded-full shadow-xl border border-card-border-light dark:border-card-border-dark overflow-hidden">
-            <div className="px-4 py-2 bg-card-dark dark:bg-card-light">
+          <div className="inline-flex items-center rounded-full shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="px-4 py-2 bg-black dark:bg-white">
               <span className="text-sm font-semibold text-white dark:text-black">Waitlist v1</span>
             </div>
-            <div className="px-4 py-2 bg-card-light dark:bg-card-dark">
+            <div className="px-4 py-2 bg-white dark:bg-[#0a0a0a]">
               <span className="text-sm font-semibold text-black dark:text-white">Coming Soon</span>
             </div>
           </div>
@@ -207,10 +207,10 @@ function HomeContent() {
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Your email..."
-                className={`w-full pl-10 pr-4 py-3 bg-card-light dark:bg-card-dark border ${
+                className={`w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border ${
                   emailError 
                     ? 'border-red-500 dark:border-red-500' 
-                    : 'border-card-border-light dark:border-card-border-dark'
+                    : 'border-gray-300 dark:border-gray-600'
                 } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:focus:ring-blue-500 dark:focus:border-transparent outline-none text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-400 shadow-lg backdrop-blur-0 transition-all duration-300`}
                 required
                 disabled={isLoading}
@@ -225,7 +225,7 @@ function HomeContent() {
             <button
               type="submit"
               disabled={isLoading || !!emailError}
-              className="w-full bg-card-dark dark:bg-card-light text-white dark:text-black py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 shadow-2xl border border-card-dark dark:border-card-light disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
+              className="w-full bg-black dark:bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 shadow-2xl border border-black dark:border dark:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
             >
               {isLoading ? 'Joining...' : 'Join The Waitlist'}
             </button>
