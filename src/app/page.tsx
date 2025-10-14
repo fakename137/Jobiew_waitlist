@@ -178,11 +178,11 @@ function HomeContent() {
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Waitlist Badge */}
           <div className="inline-flex items-center rounded-full shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <div className="px-4 py-2 bg-black dark:bg-white">
-              <span className="text-sm font-semibold text-white dark:text-black">Waitlist v1</span>
+            <div className="px-4 py-2 bg-black ">
+              <span className="text-sm font-semibold text-white">Waitlist v1</span>
             </div>
-            <div className="px-4 py-2 bg-white dark:bg-black">
-              <span className="text-sm font-semibold text-black dark:text-white">Coming Soon</span>
+            <div className="px-4 py-2 bg-white ">
+              <span className="text-sm font-semibold text-black  ">Coming Soon</span>
             </div>
           </div>
 
