@@ -203,7 +203,7 @@ function SuccessPageContent() {
 
          {/* Footer */}
          <div className="mt-8 mb-8 text-center">
-           <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-6 shadow-2xl border border-gray-200/50 dark:border-gray-600/30 relative overflow-hidden">
+           <div className="bg-card-bg-light dark:bg-card-bg-dark rounded-3xl p-6 shadow-2xl border border-card-border-light dark:border-card-border-dark relative overflow-hidden">
             <div className="relative z-10">
               <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gray-600 dark:text-gray-400 font-bold mb-2">
                 LAUNCHING SOON
@@ -218,7 +218,7 @@ function SuccessPageContent() {
           </div>
         </div>
         {/* Main Card */}
-        <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-600/30">
+        <div className="bg-card-bg-light dark:bg-card-bg-dark rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl border border-card-border-light dark:border-card-border-dark">
           
           {/* Main Content */}
           <div className="relative z-10">
@@ -238,7 +238,7 @@ function SuccessPageContent() {
             {/* Referral CTA */}
             <div className="mb-6 relative inline-block group">
               {/* Main content */}
-              <div className="relative bg-white/70 dark:bg-gray-700/50 px-3 md:px-5 py-2 md:py-3 rounded-xl border-2 border-gray-300/60 dark:border-gray-500/40 shadow-xl">
+              <div className="relative bg-card-light dark:bg-card-dark px-3 md:px-5 py-2 md:py-3 rounded-xl border-2 border-card-border-light dark:border-card-border-dark shadow-xl">
                 <div className="flex items-center gap-2 md:gap-3">
                   {/* Left side: Number emphasis */}
                   <div className="flex flex-col items-center">
@@ -281,7 +281,7 @@ function SuccessPageContent() {
             <div className="space-y-4">
               <button
                 onClick={copyInviteLink}
-                className="w-full bg-white/70 dark:bg-gray-700/50 text-black dark:text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-gray-300/60 dark:border-gray-500/40 hover:bg-white/80 dark:hover:bg-gray-600/60 hover:border-gray-400/70 dark:hover:border-gray-400/50"
+                className="w-full bg-card-light dark:bg-card-dark text-black dark:text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-card-border-light dark:border-card-border-dark hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600"
               >
                 {copied ? 'LINK COPIED' : 'GET REFERRAL LINK'}
               </button>
@@ -306,7 +306,7 @@ function SuccessPageContent() {
         {/* Leaderboard Section */}
         <div className="mt-8">
           {/* Leaderboard Card */}
-          <div className="bg-white/60 dark:bg-gray-800/40 rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-600/30 relative overflow-hidden">
+          <div className="bg-card-bg-light dark:bg-card-bg-dark rounded-3xl p-8 shadow-2xl border border-card-border-light dark:border-card-border-dark relative overflow-hidden">
             
             <div className="relative z-10">
               {/* Header */}
@@ -348,10 +348,10 @@ function SuccessPageContent() {
                       )}
                       
                       <div
-                        className="group flex items-center gap-2 md:gap-4 p-3 md:p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg bg-white/60 dark:bg-gray-700/40 border border-gray-200/50 dark:border-gray-500/30 hover:bg-white/70 dark:hover:bg-gray-600/50"
+                        className="group flex items-center gap-2 md:gap-4 p-3 md:p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg bg-card-bg-light dark:bg-card-bg-dark border border-card-border-light dark:border-card-border-dark hover:bg-card-light dark:hover:bg-card-dark"
                       >
                     {/* Rank Badge */}
-                    <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-xs md:text-sm shadow-md transition-all duration-300 bg-white/60 dark:bg-gray-600/40 text-black dark:text-white border border-gray-200/50 dark:border-gray-500/30">
+                    <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-xs md:text-sm shadow-md transition-all duration-300 bg-card-bg-light dark:bg-card-bg-dark text-black dark:text-white border border-card-border-light dark:border-card-border-dark">
                       {leaderUser.position}
                     </div>
                     
@@ -362,7 +362,7 @@ function SuccessPageContent() {
                           {leaderUser.email.replace(/(.{2}).*(@.*)/, '$1***$2')}
                         </span>
                         {leaderUser.id === user?.id && (
-                          <span className="text-[8px] md:text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-white/60 dark:bg-gray-600/40 rounded-md border border-gray-200/50 dark:border-gray-500/30">
+                          <span className="text-[8px] md:text-[10px] text-black dark:text-white font-black uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-card-bg-light dark:bg-card-bg-dark rounded-md border border-card-border-light dark:border-card-border-dark">
                             YOU
                           </span>
                         )}
@@ -376,7 +376,7 @@ function SuccessPageContent() {
                     </div>
                     
                     {/* Referral Count Badge */}
-                    <div className="flex-shrink-0 px-2 md:px-3 py-1.5 md:py-2 rounded-xl bg-white/60 dark:bg-gray-600/40 border border-gray-200/50 dark:border-gray-500/30 text-center">
+                    <div className="flex-shrink-0 px-2 md:px-3 py-1.5 md:py-2 rounded-xl bg-card-bg-light dark:bg-card-bg-dark border border-card-border-light dark:border-card-border-dark text-center">
                       <div className="text-[8px] md:text-[10px] text-gray-600 dark:text-gray-400 font-black uppercase tracking-wider">REFS</div>
                       <div className="text-lg md:text-xl font-black text-black dark:text-white leading-none mt-1">
                         {leaderUser.referral_count}
