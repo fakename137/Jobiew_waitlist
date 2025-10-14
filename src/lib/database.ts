@@ -34,7 +34,7 @@ function generateInviteCode(): string {
 }
 
 // Add user to waitlist
-export async function addToWaitlist(email: string, _inviteCode?: string): Promise<AddToWaitlistResult> {
+export async function addToWaitlist(email: string, inviteCode?: string): Promise<AddToWaitlistResult> {
   try {
     // Check if user already exists
     const { data: existingUser, error: checkError } = await supabase
@@ -76,7 +76,8 @@ export async function addToWaitlist(email: string, _inviteCode?: string): Promis
       .insert({
         email,
         invite_code: userInviteCode,
-        position
+        position,
+        referred_by_code: inviteCode || null
       })
       .select()
       .single()
