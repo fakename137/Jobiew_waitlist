@@ -181,7 +181,7 @@ function HomeContent() {
             <div className="px-4 py-2 bg-black dark:bg-white">
               <span className="text-sm font-semibold text-white dark:text-black">Waitlist v1</span>
             </div>
-            <div className="px-4 py-2 bg-white dark:bg-[#0a0a0a]">
+            <div className="px-4 py-2 bg-white dark:bg-black">
               <span className="text-sm font-semibold text-black dark:text-white">Coming Soon</span>
             </div>
           </div>

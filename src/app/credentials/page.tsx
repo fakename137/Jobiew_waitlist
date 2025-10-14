@@ -128,7 +128,7 @@ function CredentialsPageContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="bg-card-light dark:bg-card-dark rounded-2xl shadow-lg p-8 border border-card-border-light dark:border-card-border-dark"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
