@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
         const referralLink = `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3001'}?invite=${result.user.invite_code}`;
         
         await resend.emails.send({
-          from: 'nohunt.ai <onboarding@resend.dev>',
+          from: 'nohunt.ai <community@nohunt.ai>',
           to: [result.user.email],
           subject: `Welcome to nohunt.ai - You're #${result.user.position} in line!`,
           react: WaitlistEmailTemplate({

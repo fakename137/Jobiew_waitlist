@@ -4,7 +4,6 @@ import { useState, useEffect, Suspense } from 'react';
 import { Mail, Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { WaitlistEmailTemplate } from '@/components/email-template';
 
 function HomeContent() {
   const [email, setEmail] = useState('');
@@ -159,7 +158,7 @@ function HomeContent() {
       <header className="w-full px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-3xl text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 100, letterSpacing: '0.1em', textTransform: 'uppercase' }}>nohunt.ai</span>
+            <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 100, letterSpacing: '0.1em', textTransform: 'uppercase' }}>nohunt.ai</span>
           </div>
           
       

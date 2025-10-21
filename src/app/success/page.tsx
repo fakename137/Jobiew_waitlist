@@ -288,7 +288,7 @@ function SuccessPageContent() {
               
               {/* WhatsApp Community Button */}
               <a
-                href="https://whatsapp.com/channel/0029VbBnwrn5a247geAOdo0R"
+                href="https://chat.whatsapp.com/Hg7FlfPvTkF5upOHOBgvyI?mode=wwt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-green-500 to-green-600 dark:from-green-600 dark:to-green-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-xs md:text-sm lg:text-base font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 border border-green-600 dark:border-green-700 hover:from-green-600 hover:to-green-700 dark:hover:from-green-700 dark:hover:to-green-800"
