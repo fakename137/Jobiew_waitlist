@@ -24,11 +24,14 @@ export function WaitlistEmailTemplate({ position, totalUsers, inviteCode, referr
       }}>
         <h1 style={{ 
           fontSize: '28px', 
-          fontWeight: 'bold', 
+          fontWeight: 100, 
           margin: '0', 
-          color: '#000000'
+          color: '#000000',
+          fontFamily: 'var(--font-orbitron), sans-serif',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase'
         }}>
-          Jobiew
+          nohunt.ai
         </h1>
         <p style={{
           fontSize: '16px',
@@ -74,33 +77,6 @@ export function WaitlistEmailTemplate({ position, totalUsers, inviteCode, referr
           </p>
         </div>
 
-        {/* Invite Code */}
-        <div style={{ 
-          marginBottom: '30px',
-          padding: '20px',
-          background: '#ffffff',
-          borderRadius: '8px',
-          border: '2px solid #e9ecef'
-        }}>
-          <p style={{
-            fontSize: '14px',
-            color: '#666666',
-            margin: '0 0 12px 0'
-          }}>
-            Your invite code
-          </p>
-          <p style={{
-            fontSize: '24px',
-            fontWeight: 'bold',
-            color: '#000000',
-            letterSpacing: '2px',
-            margin: '0',
-            fontFamily: 'monospace'
-          }}>
-            {inviteCode}
-          </p>
-        </div>
-
         {/* Referral Info */}
         <div style={{ marginBottom: '30px' }}>
           <p style={{
@@ -126,9 +102,11 @@ export function WaitlistEmailTemplate({ position, totalUsers, inviteCode, referr
             fontWeight: 'bold'
           }}
         >
-          Copy Referral Link
+          Share Referral Link
         </a>
       </div>
+
+   
 
       {/* Footer */}
       <div style={{ 
@@ -140,7 +118,7 @@ export function WaitlistEmailTemplate({ position, totalUsers, inviteCode, referr
           color: '#666666', 
           margin: '0 0 8px 0'
         }}>
-          We&apos;ll notify you when Jobiew launches
+          We&apos;ll notify you when nohunt.ai launches
         </p>
         <p style={{ 
           fontSize: '12px', 

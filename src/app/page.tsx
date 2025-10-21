@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { Mail, Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useSearchParams, useRouter } from 'next/navigation';
+import { WaitlistEmailTemplate } from '@/components/email-template';
 
 function HomeContent() {
   const [email, setEmail] = useState('');
@@ -158,7 +159,7 @@ function HomeContent() {
       <header className="w-full px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Jobiew</span>
+            <span className="text-3xl text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 100, letterSpacing: '0.1em', textTransform: 'uppercase' }}>nohunt.ai</span>
           </div>
           
       
@@ -247,14 +248,24 @@ function HomeContent() {
         </div>
       </main>
 
+    
+
       {/* Footer */}
       <footer className="px-6 py-8 text-center">
         <p className="text-black dark:text-gray-400 text-sm">
-          © Jobiew - Find your dream job 10x faster. Built by{' '}
+          © nohunt.ai - Find your dream job 10x faster. Built by{' '}
           <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">FakeName</a>{' '}
           &{' '}
           <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">abdulhaq</a>.
         </p>
+        <div className="mt-4">
+          <a 
+            href="/email-preview" 
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors underline"
+          >
+            📧 Preview Email Template
+          </a>
+        </div>
       </footer>
     </div>
   );

@@ -20,19 +20,19 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "Jobiew - Find Your Dream Job 10x Faster | AI-Powered Job Search",
-  description: "Join the Jobiew waitlist for early access to AI-powered job hunting. Let your AI agent find jobs for you and get to interviews 10x faster. Revolutionary job search technology.",
+  title: "nohunt.ai - Find Your Dream Job 10x Faster | AI-Powered Job Search",
+  description: "Join the nohunt.ai waitlist for early access to AI-powered job hunting. Let your AI agent find jobs for you and get to interviews 10x faster. Revolutionary job search technology.",
   keywords: ["job search", "AI jobs", "career", "job hunting", "recruitment", "AI agent", "employment"],
-  authors: [{ name: "Jobiew Team" }],
+  authors: [{ name: "nohunt.ai Team" }],
   openGraph: {
-    title: "Jobiew - AI-Powered Job Search Platform",
+    title: "nohunt.ai - AI-Powered Job Search Platform",
     description: "Find your dream job 10x faster with AI-powered job hunting. Join the waitlist for early access.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jobiew - Find Your Dream Job 10x Faster",
+    title: "nohunt.ai - Find Your Dream Job 10x Faster",
     description: "AI-powered job hunting platform. Join the waitlist for early access.",
   },
   robots: {

@@ -161,7 +161,7 @@ function SuccessPageContent() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-black dark:text-white mb-4">
-            Welcome to Jobiew!
+            Welcome to nohunt.ai!
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
             You&apos;re all set! Redirecting to the waitlist...
@@ -177,7 +177,7 @@ function SuccessPageContent() {
       <header className="w-full px-6 py-4">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Jobiew</span>
+              <span className="text-3xl font-black text-black dark:text-gray-200" style={{ fontFamily: 'var(--font-orbitron), sans-serif', fontWeight: 100, letterSpacing: '0.1em', textTransform: 'uppercase' }}>nohunt.ai</span>
             </div>
           
           <div className="flex items-center gap-2">
@@ -409,7 +409,7 @@ function SuccessPageContent() {
       {/* Footer */}
       <footer className="px-6 py-8 text-center">
         <p className="text-black dark:text-gray-400 text-sm">
-          © Jobiew - Find your dream job 10x faster. Built by{' '}
+          © nohunt.ai - Find your dream job 10x faster. Built by{' '}
           <a href="https://x.com/FakeName137" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">FakeName</a>{' '}
           &{' '}
           <a href="https://x.com/i_am_abdulhaq" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors">abdulhaq</a>.

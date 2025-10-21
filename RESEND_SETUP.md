@@ -42,7 +42,7 @@ If Resend is only sending emails to `jayanth.sms.in@gmail.com`, you're likely in
 5. **Update Email Sender**
    Change in `/src/app/api/join-waitlist/route.ts`:
    ```typescript
-   from: 'Jobiew <noreply@jobiew.com>',  // Use your verified domain
+   from: 'nohunt.ai <noreply@nohunt.ai>',  // Use your verified domain
    ```
 
 ---
@@ -77,7 +77,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 if (isDevelopment) {
   console.log('Development mode: Email would be sent to:', result.user.email);
   console.log('Email content:', {
-    subject: `Welcome to Jobiew - You're #${result.user.position} in line!`,
+    subject: `Welcome to nohunt.ai - You're #${result.user.position} in line!`,
     position: result.user.position,
     referralLink: referralLink,
   });
@@ -85,9 +85,9 @@ if (isDevelopment) {
 } else {
   // Send real email
   await resend.emails.send({
-    from: 'Jobiew <onboarding@resend.dev>',
+    from: 'nohunt.ai <onboarding@resend.dev>',
     to: [result.user.email],
-    subject: `Welcome to Jobiew - You're #${result.user.position} in line!`,
+    subject: `Welcome to nohunt.ai - You're #${result.user.position} in line!`,
     react: WaitlistEmailTemplate({
       position: result.user.position,
       totalUsers: result.totalUsers || result.user.position,
@@ -129,9 +129,9 @@ const recipientEmail = isTestMode
   : result.user.email;
 
 await resend.emails.send({
-  from: 'Jobiew <onboarding@resend.dev>',
+  from: 'nohunt.ai <onboarding@resend.dev>',
   to: [recipientEmail],
-  subject: `Welcome to Jobiew - You're #${result.user.position} in line!`,
+  subject: `Welcome to nohunt.ai - You're #${result.user.position} in line!`,
   react: WaitlistEmailTemplate({
     position: result.user.position,
     totalUsers: result.totalUsers || result.user.position,
@@ -168,10 +168,10 @@ Before going live:
 ### 1. Use Proper Sender Domain
 ```typescript
 // ✅ Good (verified domain)
-from: 'Jobiew <hello@jobiew.com>'
+from: 'nohunt.ai <hello@nohunt.ai>'
 
 // ❌ Bad (sandbox)
-from: 'Jobiew <onboarding@resend.dev>'
+from: 'nohunt.ai <onboarding@resend.dev>'
 ```
 
 ### 2. Handle Email Failures Gracefully
@@ -258,16 +258,17 @@ RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxx
 
 **File:** `/src/app/api/join-waitlist/route.ts`
 **Line:** 81
-**Current sender:** `Jobiew <onboarding@resend.dev>`
+**Current sender:** `nohunt.ai <onboarding@resend.dev>`
 
 **Action Required:**
 1. Verify domain in Resend
-2. Update sender to: `Jobiew <hello@yourdomain.com>`
+2. Update sender to: `nohunt.ai <hello@yourdomain.com>`
 3. Test with real user emails
 
 ---
 
 Last Updated: 2025
+
 
 
 
