@@ -111,52 +111,7 @@ export function WaitlistEmailTemplate({ position, totalUsers }: WaitlistEmailPro
         }}>
           While millions struggle with traditional job hunting, you&apos;re ahead of the curve with AI-powered automation
         </p>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '60px',
-          margin: '20px 0'
-        }}>
-          <div style={{ textAlign: 'center' }}>
-            <p style={{
-              fontSize: '24px',
-              color: '#ffffff',
-              margin: '0 0 4px 0',
-              fontFamily: 'monospace',
-              fontWeight: 'bold'
-            }}>
-              50M+
-            </p>
-            <p style={{
-              fontSize: '12px',
-              color: '#999999',
-              margin: '0',
-              fontWeight: 300
-            }}>
-              Job applicants globally
-            </p>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <p style={{
-              fontSize: '24px',
-              color: '#ffffff',
-              margin: '0 0 4px 0',
-              fontFamily: 'monospace',
-              fontWeight: 'bold'
-            }}>
-              10x
-            </p>
-            <p style={{
-              fontSize: '12px',
-              color: '#999999',
-              margin: '0',
-              fontWeight: 300
-            }}>
-              Faster interviews
-            </p>
-          </div>
-        </div>
+     
       </div>
 
    
